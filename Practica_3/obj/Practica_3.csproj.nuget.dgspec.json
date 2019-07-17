@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jose_\\source\\repos\\Practica_3\\Practica_3\\Practica_3.csproj": {}
+    "C:\\Users\\jose_\\Source\\Repos\\PracticaSwagger\\Practica_3\\Practica_3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jose_\\source\\repos\\Practica_3\\Practica_3\\Practica_3.csproj": {
+    "C:\\Users\\jose_\\Source\\Repos\\PracticaSwagger\\Practica_3\\Practica_3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jose_\\source\\repos\\Practica_3\\Practica_3\\Practica_3.csproj",
+        "projectUniqueName": "C:\\Users\\jose_\\Source\\Repos\\PracticaSwagger\\Practica_3\\Practica_3.csproj",
         "projectName": "Practica_3",
-        "projectPath": "C:\\Users\\jose_\\source\\repos\\Practica_3\\Practica_3\\Practica_3.csproj",
+        "projectPath": "C:\\Users\\jose_\\Source\\Repos\\PracticaSwagger\\Practica_3\\Practica_3.csproj",
         "packagesPath": "C:\\Users\\jose_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jose_\\source\\repos\\Practica_3\\Practica_3\\obj\\",
+        "outputPath": "C:\\Users\\jose_\\Source\\Repos\\PracticaSwagger\\Practica_3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -65,6 +65,14 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

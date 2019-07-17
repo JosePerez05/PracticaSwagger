@@ -11,7 +11,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Practica_3.Contract;
 using Practica_3.Entities;
+using Practica_3.implementation;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Practica_3
 {
@@ -29,6 +32,8 @@ namespace Practica_3
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<LibraryContext>(op => op.UseSqlServer(Configuration["ConnectionString:BookStoreDB"]));
+            services.AddScoped<ILibraryRepository<Author>, LibraryRepository>();
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info { Title = "LIbrary API", Version = "V1" });});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +50,10 @@ namespace Practica_3
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "post API V1");
+            });
         }
     }
 }

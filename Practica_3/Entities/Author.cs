@@ -11,7 +11,6 @@ namespace Practica_3.Entities
     public class Author
     {
         [Key]
-
         public Guid AuthorId { get; set; }
 
         [Required]
