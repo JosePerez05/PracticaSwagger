@@ -11,18 +11,18 @@ namespace Practica_3.Entities
     public class Author
     {
         [Key]
-        public Guid AuthorId { get; set; }
+        public Guid IdAutor { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string FirstName { get; set; }
+        public string Nombre { get; set; }
         [Required]
         [MaxLength(50)]
-        public string LastName { get; set; }
+        public string Apellido { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string Genre { get; set; }
+        public string Genero { get; set; }
 
         public ICollection<Book> Books { get; set; } = new List<Book>();
     }

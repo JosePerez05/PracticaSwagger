@@ -33,7 +33,7 @@ namespace Practica_3
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<LibraryContext>(op => op.UseSqlServer(Configuration["ConnectionString:BookStoreDB"]));
             services.AddScoped<ILibraryRepository<Author>, LibraryRepository>();
-            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info { Title = "LIbrary API", Version = "V1" });});
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info { Title = "Biblioteca API", Version = "V1" });});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

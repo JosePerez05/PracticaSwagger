@@ -10,17 +10,17 @@ namespace Practica_3.Entities
     public class Book
     {
         [Key]
-        public Guid BookId { get; set; }
+        public Guid IdLibro { get; set; }
         [Required]
         [MaxLength(150)]
-        public string Title { get; set; }
+        public string Titulo { get; set; }
         [MaxLength(200)]
-        public string Description { get; set; }
+        public string Descripcion { get; set; }
 
-        [ForeignKey("AuthorId")]
-        public Author Author { get; set; }
+        [ForeignKey("IdAutor")]
+        public Author Autor { get; set; }
 
-        public Guid AuthorId { get; set; }
+        public Guid IdAutor { get; set; }
 
     }
 }
